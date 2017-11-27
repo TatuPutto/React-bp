@@ -16,17 +16,15 @@ module.exports = {
             exclude: /(node_modules|bower_components)/,
             loader: 'babel-loader',
                 query: {
-                    presets: ['react', 'es2015', 'stage-0'],
+                    presets: ['react', 'env', 'stage-0'],
                     plugins: [
                         'react-html-attrs',
-                        'transform-class-properties',
-                        'transform-decorators-legacy'
+                        'transform-class-properties'
                     ],
                 },
         },
         {test: /\.html$/, loader: 'file-loader?name=[name].[ext]'},
         {test: /\.css$/, loader: 'style-loader!css-loader'},
-        {test: /\.less$/, loader: 'style-loader!css-loader!less-loader'},
         {test: /\.json$/, loader: 'json-loader'}
     ]
     },
